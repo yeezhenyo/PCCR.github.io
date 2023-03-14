@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title>PCSH_犬研</title>
+        <link rel="stylesheet" href="css.css"/>
+
+        <!--套用網路的AOS-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        
+    </head>
+    <body>
+
+      <!--水平導覽-->
+     <header class="main-header">
+        <div class="top">
+          <img src="logo-new6.png" style="float:ieft;" class="logo"/>
+          <nav class="main-nav">
+           <a href="https://www.pcsh.ntpc.edu.tw/" class="toplink">板中首頁</a></h4>
+           <a href="https://www.instagram.com/pccr16th/" class="toplink">聯絡我們</a></h4>
+          </nav>
+        </div>
+      </header>
+
+      <!--輪播圖區-->
+      <div class="slider">
+        <div class="slides">
+
+          <!--手動點擊按鈕-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          
+          <!--圖-->
+          <div class="slide first">
+            <img src="犬研合照.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="八社.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="狗一.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="狗二.jpg" alt="">
+          </div>
+
+          <!--自動撥放按鈕-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+        
+        <!--手動點擊按鈕-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>
+        
+
+        <h1>PCSH_Canine Research Club</h1>
+        <br/>
+        <hr/>
+        <br/>
+        <div id="description" data-aos="fade-right">
+            <h2>犬研簡介</h2>
+            <hr/>
+        <h3>社課內容</h3>
+        <p>哈囉大家好~我們是板中犬研，我們社團的授課內容分為兩個部分，在每周的第一節課我們會待在教室聽寵物學校的老師教導關於各類犬種的特色，與和狗狗接觸所需注意的事項;第二節課我們則會倒室外與訓練犬進行實際的接觸，當然也會實際對狗狗們施予指令！(注意：每堂課都會有小餅乾和飲料！)</p>
+        <br/>
+        <hr/>
+        <br/>
+        <h3>幹部介紹</h3>
+        <table>
+          <tr>
+            <td><b>社長</b></td>
+            <td>XXX</td>
+          </tr>
+          <tr>
+            <td><b>副社長</b></td>
+            <td>XXX</td>
+          </tr>
+          <tr>
+            <td><b>公關兼文書</b></td>
+            <td>XXX</td>
+          </tr>
+          <tr>
+            <td><b>教學</b></td>
+            <td>XXX、XXX</td>
+          </tr>
+          <tr>
+            <td><b>總務</b></td>
+            <td>XXX</td>
+          </tr>
+          <tr>
+            <td><b>衛生</b></td>
+            <td>XXX</td>
+          </tr>
+        </table>
+        <br/>
+        </div>
+        <br/>
+        <br/>
+        <div id="information" data-aos="fade-up">
+          <h2>新生須知</h2>
+          <hr/>
+          <h3>社課地點與時間</h3>
+          <p>每周五第6、7節在惠樓一樓的口說教室1</p>
+          <img src="map.jpg" width="400px" class="map" data-aos="flip-left"/>
+        </div>
+        <br/>
+        <br/>
+        <div id="activity" data-aos="fade-left">
+          <h2>近期活動</h2>
+          <hr/>
+          <ul>
+            <li><h4><a href="index.2">高一迎新</a></h4></li>
+            <li><h4><a href="index.3">社遊</a></h4></li>
+          </ul>
+        </div>
+        
+<!--AOS_網頁下面的動畫-->
+
+        <script>
+            AOS.init({
+                duration:3000,
+            });
+            
+          </script>
+
+<!--自動輪播圖-->
+
+      <script type="text/javascript">
+        var counter=1;
+        setInterval(function(){
+          document.getElementById('radio' + counter).checked=true;
+          counter++;
+          if(counter>4){
+            counter=1;
+          }
+        },3000);
+      </script>
+
+    </body>
+</html>

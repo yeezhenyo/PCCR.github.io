@@ -1,0 +1,188 @@
+body{
+    background:url(sky4.png) center no-repeat fixed  ;
+    background-size: cover;
+    margin:0px;
+}
+
+
+
+.top{
+    display: flex;
+    background-color: #24252A;
+    overflow: hidden; 
+    padding: 20px;   
+    align-items: end;
+    
+}
+.logo{
+    width: 300px;
+}
+.main-nav{
+    margin:auto;
+}
+
+/*水平導覽+連結的動畫*/
+
+.main-nav a{
+ color:white;
+ text-decoration: none;
+ padding:0px 30px 0px 30px;
+ align-items: right;
+ position: relative;
+ transform: translateY(0px);
+ transition: 1s;
+ display: inline-block;
+
+}
+.main-nav a::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    right:50%;
+    bottom:-5px;
+    height: 0;
+    border-bottom: 1px solid #fff;
+    transition: 1s;
+
+}
+.main-nav a:hover::after{
+  left:0;
+  right:0;
+
+}
+.main-nav a:hover{
+    transform: translateY(-5px);
+}
+
+
+
+h1{
+    text-align: center;
+    padding: 20px;
+}
+#description{
+    background-color: rgb(198, 205, 202,0.75);
+    border: 5px solid gray;
+    width: 800px;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.8);
+    
+}
+#information{
+    background-color: rgb(198, 205, 202,0.75);
+    border: 5px solid gray;
+    width: 800px;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.8);
+}
+#activity{
+    background-color: rgb(198, 205, 202,0.75) ;
+    border: 5px solid gray;
+    width: 800px;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.8);
+}
+.map{
+    padding: 5px;
+}
+p{
+    padding: 10px;
+}
+td{
+    padding: 10px;
+}
+h3{
+    padding:10px;
+}
+
+/*輪播圖 手動點擊*/
+
+.slider{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.slides{
+    width: 100%;
+    height: 400px;
+    display:flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 100%;
+    transition: 2s;
+}
+.slide img{
+    width: 1300px;
+    height: 400px;
+    
+}
+.navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #4a878a;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background: #4a878a;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -100%;
+}
+#radio3:checked ~ .first{
+    margin-left: -200%;
+}
+#radio4:checked ~ .first{
+    margin-left: -300%;
+}
+
+
+/*自動撥放!!*/
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 360px;
+}
+.navigation-auto div{
+    border: 2px solid rgb(198, 205, 202) ;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #4a878a;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #4a878a;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #4a878a;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #4a878a;
+}
